@@ -12,7 +12,7 @@ now this is something that could lead somewhere
 
 > well this is a quote
 
-```
+```java
  @Override
     public void celebrate(Cake c) {
         age++;
@@ -22,48 +22,23 @@ now this is something that could lead somewhere
 
 more code...
 
-```
-public abstract class Cake {
-    protected int layers;
+```java
+import java.util.ArrayList;
 
-    public Cake(int layers) { this.layers = layers; }
+public class TestShape {
+    public static void main(String[] args) {
+        ArrayList<Shape> shapes = new ArrayList<>();
+        shapes.add(new Square(5));
+        shapes.add(new Circle(2));
 
-    public abstract boolean isALie();
-}
-
-public class Cupcake extends Cake {
-    private String frosting;
-
-    public Cupcake(int layers, String frosting) {
-        super(layers);
-        this.frosting = frosting;
-    }
-
-    @Override
-    public boolean isALie() { return false; }
-}
-
-public interface Birthdayable {
-    public void celebrate(Cake c);
-}
-
-public class Person implements Birthdayable {
-    private String name;
-    private int age;
-    private Cake cake;
-
-    public Person(String name, int age) {
-        this.name = name;
-        this.age = age;
-        this.cake = null;
-    }
-
-    @Override
-    public void celebrate(Cake c) {
-        age++;
-        cake = c;
+        for (Shape s : shapes) {
+            System.out.println(s);
+            System.out.println(" Area: " + s.area());
+            System.out.println(" Perimeter: " + s.perimeter());
+        }
     }
 }
+
 ```
 
 it is weidely known that as you type things tend to appear in the screen

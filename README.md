@@ -4,7 +4,7 @@ cover: >-
 coverY: 0
 ---
 
-# Week 1a
+# Week 1
 
 testing integration between github and gitbook.io....
 
